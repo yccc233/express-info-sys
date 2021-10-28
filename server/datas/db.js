@@ -13,7 +13,7 @@ var database = new sqlite3.Database("./database.db", function(e){
  * 创建user_account表
  */
 var createTableSQL_user_account = "create table user_account (" +
-    "id integer primary key," +
+    "userid integer primary key," +
     "account varchar(10) not null," +
     "password varchar(20) not null," +
     "role varchar(1) not null" +

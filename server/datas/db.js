@@ -12,14 +12,14 @@ var database = new sqlite3.Database("./database.db", function(e){
 /**
  * 创建user_account表
  */
-var createTableSQL = "create table user_account (" +
+var createTableSQL_user_account = "create table user_account (" +
     "id integer primary key," +
     "account varchar(10) not null," +
     "password varchar(20) not null," +
     "role varchar(1) not null" +
     ");"
 
-console.log(createTableSQL)
+console.log(createTableSQL_user_account)
 
-database.run(createTableSQL);
+database.run(createTableSQL_user_account);
 setTimeout(() => database.close(), 100);

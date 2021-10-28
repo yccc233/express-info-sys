@@ -1,4 +1,9 @@
 module.exports = () => {
+    /**
+     * 加工uri
+     * @param str 请求uri，编码后的
+     * @returns {{...}} 返回解码键值对
+     */
     const getParse = (str) => {
         let params = {};
         str.split('&').map( kv => {
@@ -7,6 +12,11 @@ module.exports = () => {
         });
         return params;
     }
+    
+    /**
+     * 数据库操作，简化方法
+     */
+    
 
     return {
         getParse: getParse,

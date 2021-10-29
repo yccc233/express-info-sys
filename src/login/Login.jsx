@@ -17,6 +17,12 @@ function Login(props) {
             role: params.role
         }).done(res => {
             console.log(res)
+            res = JSON.parse(res);
+            if(res.code == 0) {
+            
+            } else {
+            
+            }
         });
     }
     
@@ -71,7 +77,6 @@ function Login(props) {
                             <Button type={"primary"} htmlType={"submit"}>登录</Button>
                             <span style={{marginLeft: "10px"}}>还没有账户啊！<Link to={"/register"} style={{textDecoration: "underline"}}>立即注册</Link></span>
                         </Item>
-                        
                     </Form>
                 </div>
             </div>

@@ -12,11 +12,6 @@ module.exports = () => {
         });
         return params;
     }
-    
-    /**
-     * 数据库操作，简化方法
-     */
-    
 
     return {
         getParse: getParse,

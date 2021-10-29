@@ -3,7 +3,6 @@ const postParse = require('../utils')().postParse;
 var sqlite3 = require("sqlite3").verbose();
 var database = new sqlite3.Database("./server/datas/database1.db", function(e){
     if (e) throw e;
-    console.log("already open the databases.")
 });
 
 /**
@@ -32,7 +31,8 @@ router.post("/verify", function (req, res) {
                 if (params.password === info.password && params.role === info.role)
                     data = {
                         type: 0,
-                        describe: "success"
+                        describe: "success",
+                        userid: info.userid
                     }
                 res.end(JSON.stringify({
                     code: 0,
@@ -103,7 +103,8 @@ router.post("/register", function (req, res) {
                                 message: "success",
                                 data: {
                                     type: 0,
-                                    description: "success"
+                                    description: "success",
+                                    userid: rows[0].userid
                                 }
                             }))
                         }

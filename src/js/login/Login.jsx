@@ -2,6 +2,7 @@
 import React, {useState} from "react";
 import {Button, Form, Input, Radio} from "antd";
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import cookie from "react-cookies";
 import '../../css/login.css';
 import {Link, Redirect} from "react-router-dom";
 import Notify from "../notify";
@@ -26,6 +27,7 @@ function Login(props) {
                     res = res.data;
                     switch (res.type) {
                         case 0:
+                            cookie.save('userid', res.userid);
                             setIsLogin(true);
                             break;
                         case 1:

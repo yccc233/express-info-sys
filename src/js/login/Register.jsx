@@ -42,7 +42,7 @@ function Register() {
     return <>
         {
             isRedirect ?
-                <Redirect to={"/homepage"}/>
+                <Redirect to={"/login"}/>
                 :
                 <Space align={"center"} className={"register-box"}>
                     <div>

@@ -2,7 +2,6 @@
 import React from "react";
 import cookie from "react-cookies";
 import Notify from "../notify";
-import {Route} from "react-router-dom";
 import Topbar from "./Topbar";
 
 const $ = require("jquery");

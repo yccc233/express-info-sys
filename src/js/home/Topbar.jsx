@@ -18,7 +18,7 @@ function Topbar(props) {
     const Context = () => (
         <div>
             <div style={{fontSize: "16px"}}>{name}</div>
-            <div style={{fontSize: "10px", color: "cadetblue"}}>{role == 0 ? "收件人" : role == 1 ? "快递员" : role == 2 ? "工作人员" : "管理员"}</div>
+            <div style={{fontSize: "10px", color: "cadetblue"}}>{+role === 0 ? "收件人" : +role === 1 ? "快递员" : +role === 2 ? "工作人员" : "管理员"}</div>
             <hr />
             <Link to={"/login"}>退出登陆</Link>
         </div>

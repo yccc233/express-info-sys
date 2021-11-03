@@ -1,7 +1,6 @@
 import {Button, Form, Input, Radio, Space, Select, Tooltip} from "antd";
 import {Redirect} from "react-router-dom";
 import React, {useState} from "react";
-import cookie from "react-cookies"
 import '../../css/register.css';
 import Notify from "../notify";
 const $ = require("jquery");

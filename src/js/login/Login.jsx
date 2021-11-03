@@ -27,7 +27,8 @@ function Login(props) {
                     res = res.data;
                     switch (res.type) {
                         case 0:
-                            cookie.save('userid', res.userid);
+                            let oneMinute = new Date(new Date().getTime() + 1 * 60 * 1000);
+                            cookie.save('userid', res.userid, {expires: oneMinute});
                             setIsLogin(true);
                             break;
                         case 1:

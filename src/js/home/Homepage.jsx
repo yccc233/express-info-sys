@@ -23,8 +23,9 @@ class Homepage extends React.Component {
             console.log(res)
             res = JSON.parse(res)
             if (res.code === 0) {
-                cookie.save("account", res.data.account);
-                cookie.save("role", res.data.role);
+                let oneDay = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+                cookie.save("account", res.data.account, {expires: oneDay});
+                cookie.save("role", res.data.role, {expires: oneDay});
                 this.setState({
                     role: res.data.role,
                     account: res.data.account,
